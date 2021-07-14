@@ -1,0 +1,12 @@
+[Unit]
+Description="tomcat demo"
+After=network.target
+
+[Service]
+User=jenkins
+Group=jenkins
+WorkingDirectory=/home/jenkins/stageTomcat
+ExecStart=/bin/sh /home/jenkins/stageTomcat/target/bin/webapp
+
+[Install]
+WantedBy=multi-user.target
