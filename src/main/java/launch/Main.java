@@ -19,8 +19,9 @@ public class Main {
 
         tomcat.setPort(Integer.valueOf(webPort));
 
+        System.out.println( new File(webappDirLocation).getAbsolutePath() );
         //tomcat.addWebapp("/", new File(webappDirLocation).getAbsolutePath());
-        tomcat.addWebapp("/", "home/jenkins/stageTomcat/target/bin/webapp"); 
+        tomcat.addWebapp("/", "/home/jenkins/stageTomcat/target/bin/webapp"); 
         //System.out.println("configuring app with basedir: " + new File("./" + webappDirLocation).getAbsolutePath());
         System.out.println("configuring app with basedir: /home/jenkins/stageTomcat/target/bin/webapp");
 
